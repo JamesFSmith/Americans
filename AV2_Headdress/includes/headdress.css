@@ -1,0 +1,100 @@
+/*body with fixed position to fill screen*/
+        body {
+            margin: 0px;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+        }
+/*other elements use absolute position that is relative to the fixed body. Buttons use
+        z-index to show above the video. */
+        
+/*This is a 1920 X 1080 button, mostly transparent, to let the user touch anywhere on the screen to play the headdress video. PNG in bottom right corner gives instruction. CSS for creating a button with transparent background found on web. background-color: transparent is especially important, otherwise the layer below will not be visible, even under a button with 0 opacity.   */
+        .button1 {
+            z-index: 100;
+            position: absolute;
+            background-color: transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            left: 0px;
+            top: 0px;
+        }
+
+        #startOverBtn {
+            z-index: 1000;
+            position: absolute;
+/*            background:url(/images/yesBtn.png) no-repeat;*/
+/*            background: url("images/noBtn.png");*/
+            border: 0;
+            left: 40px;
+            top: 150px;
+            width: 100px;
+            height: 50px;
+        }
+
+        #resumeBtn {
+            z-index: 1000;
+            position: absolute;
+/*            background:url(/images/noBtn.png) no-repeat;*/
+/*            background-image: url("images/yesBtn.png");*/
+            border: 0;
+            right: 40px;
+            top: 150px;
+            width: 100px;
+            height: 50px;       
+        }
+        
+/*The attract video*/
+        #attractVid {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 10;
+        }
+        
+/* wrapper for the headdress video, so we can do a click function on it*/
+        #vidWrapper {
+            position: absolute;
+            left: 0px;
+            top: 1080px;
+            z-index: 22;
+        }
+        
+        /*The headress video*/
+        #headdressVid {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            z-index: 20;
+            display: none;
+            
+        }
+
+/*Modal box for resuming video or not*/        
+        #modal {
+            position: absolute;
+            top: 415px;
+            left: 780px;
+            width: 400px;
+            height: 250px;
+            background-color: rgba(190, 190, 190, .75);
+/*            border: 2px solid black;*/
+            z-index: 1000;
+            display: none;
+        }
+        
+        p {
+            font-family: "Maax";
+            font-size: 24pt;
+            font-weight: 100;
+            color: #444;
+            line-height: 120%;
+            text-align: center;
+        }
+        
+        .message {
+            position: relative;
+            margin-top: 50px;
+            margin-left: 2px;
+        }
