@@ -1,0 +1,20 @@
+body {
+    margin: 0 0 0 0;
+}
+
+/* .slide is the container for all the content */
+img {
+    position:relative;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* #slide is the container for all the content */
+.slide {
+    position:relative;
+    top: 0px;
+    left: 0px;
+}
+
